@@ -6,7 +6,26 @@
 [![Design System](https://img.shields.io/badge/Design%20System-Midnight%20Glass-7565F6.svg)](#design-system--midnight-glass)
 [![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions%20Passing-success.svg)](https://github.com)
 
-An enterprise-grade, full-stack intelligence and career acceleration platform engineered for higher education institutions and engineering undergraduates. Features Explainable AI (SHAP), multi-model placement prediction, automated skill-gap diagnostics, ATS resume scanning, a 7-stage campus recruitment funnel, and full institute analytics.
+An enterprise-grade, full-stack intelligence and career acceleration platform engineered for higher education institutions and engineering undergraduates. Features Explainable AI (SHAP), multi-model placement prediction, automated skill-gap diagnostics, ATS resume scanning, a 7-stage campus recruitment funnel, and comprehensive institute-level analytics.
+
+---
+
+## 📑 Academic Project Report
+
+The complete 31-page academic case study report following university guidelines is available in the [`project-report/`](./project-report/) directory:
+
+- 📄 **Official PDF Report:** [`project-report/Rohan_Dipak_Yadav_Project_Report.pdf`](./project-report/Rohan_Dipak_Yadav_Project_Report.pdf)
+- 📝 **Editable Word Document:** [`project-report/Rohan_Dipak_Yadav_Project_Report.docx`](./project-report/Rohan_Dipak_Yadav_Project_Report.docx)
+- 📊 **Validation & Audit Summary:** [`project-report/Report_Validation.md`](./project-report/Report_Validation.md)
+
+### Student & Faculty Details
+- **Lead Student:** Rohan Dipak Yadav (PRN: `24067971242005` | Roll No: `24213073`)
+- **Team Members:** Bhosale Neha Laxman, More Anushka Shankar, Nikam Shrushti Deepak, Rasal Rohan Rajesh
+- **Faculty Guide:** Prof. D.B. Hanchate
+- **Head of Department:** Prof. P. M. Pondkule
+- **Principal:** Dr. A. D. Jadhav
+- **Institute:** Raosaheb Wangde Master Charitable Trust’s Dnyanshree Institute of Engineering and Technology, Satara
+- **University:** Dr. Babasaheb Ambedkar Technological University, Lonere (Academic Year 2026–27)
 
 ---
 
@@ -58,7 +77,7 @@ flowchart TD
 
 ## 🎨 Design System — Midnight Glass
 
-The platform strictly adheres to the Apple-inspired **Midnight Glass** dark glassmorphism design system:
+The platform strictly adheres to an Apple-inspired **Midnight Glass** dark glassmorphism design system:
 
 | Token | Hex / Value | Role |
 |---|---|---|
@@ -84,12 +103,12 @@ All 6 algorithms were trained and cross-validated using **5-Fold Stratified Cros
 
 | Model Architecture | 5-Fold CV Accuracy | Test Accuracy | Precision | Recall | F1-Score | ROC-AUC | Status |
 |---|---|---|---|---|---|---|---|
-| **Logistic Regression** | 93.6% ± 0.6% | **93.8%** | **95.2%** | **97.4%** | **0.9626** | **0.9820** | 🏆 **Active Champion** |
-| **XGBoost (XGBClassifier)** | 93.2% ± 0.7% | 93.0% | 94.8% | 96.9% | 0.9582 | 0.9761 | Candidate |
-| **Gradient Boosting** | 93.1% ± 0.8% | 93.0% | 94.8% | 96.9% | 0.9582 | 0.9700 | Candidate |
-| **Support Vector Machine (SVM)** | 92.4% ± 0.9% | 92.2% | 94.4% | 96.3% | 0.9530 | 0.9750 | Candidate |
-| **Random Forest** | 91.5% ± 1.1% | 91.2% | 93.8% | 95.8% | 0.9484 | 0.9601 | Candidate |
-| **Decision Tree** | 89.8% ± 1.2% | 90.0% | 93.0% | 95.3% | 0.9413 | 0.8944 | Candidate |
+| **Logistic Regression** | 94.45% ± 0.53% | **93.8%** | **95.68%** | **96.84%** | **0.9626** | **0.9820** | 🏆 **Active Champion** |
+| **XGBoost (XGBClassifier)** | 93.25% ± 1.26% | 93.0% | 94.35% | 97.33% | 0.9582 | 0.9761 | Candidate |
+| **Gradient Boosting** | 92.75% ± 0.55% | 93.0% | 94.35% | 97.33% | 0.9582 | 0.9700 | Candidate |
+| **Support Vector Machine (SVM)** | 94.80% ± 0.70% | 92.2% | 94.72% | 95.87% | 0.9530 | 0.9750 | Candidate |
+| **Random Forest** | 91.90% ± 0.96% | 91.2% | 91.82% | 98.06% | 0.9484 | 0.9601 | Candidate |
+| **Decision Tree** | 91.15% ± 0.82% | 90.0% | 91.14% | 97.33% | 0.9413 | 0.8944 | Candidate |
 
 ### Explainable AI (XAI) with SHAP
 The platform uses **SHAP (SHapley Additive exPlanations)** to compute local feature contributions for every student:
@@ -116,11 +135,18 @@ $$\text{REGISTERED} \longrightarrow \text{ELIGIBLE} \longrightarrow \text{APPLIE
 
 ## 💻 Local Setup & Execution Guide
 
-### Prerequisites
+### Quick Start (Windows One-Click Launcher)
+Double-click **`start-platform.bat`** in the root folder. It launches both the FastAPI backend and Next.js frontend in separate terminal windows.
+
+---
+
+### Manual Setup
+
+#### Prerequisites
 - Python 3.10+ (Python 3.12 or 3.15 recommended)
 - Node.js 18+ (Node 20 or 22 recommended)
 
-### 1. Backend Setup
+#### 1. Backend Setup (FastAPI)
 ```powershell
 cd backend
 
@@ -135,7 +161,7 @@ uvicorn app.main:app --reload --port 8000
 ```
 *API Swagger Documentation is available at: [http://localhost:8000/docs](http://localhost:8000/docs)*
 
-### 2. Frontend Setup
+#### 2. Frontend Setup (Next.js 14)
 ```powershell
 cd frontend
 
@@ -153,8 +179,9 @@ npm run dev
 
 | Role | Email | Password | Persona Description |
 |---|---|---|---|
-| **Student (Preparing)** | `priya@student.edu` | `Student@123` | Average CGPA (7.4), weak coding, 6-week roadmap |
-| **Student (Placed)** | `aarav@student.edu` | `Student@123` | Top performer (8.9 CGPA), SDE-1 offer at Microsoft |
+| **Student** | `rohan@student.edu` | `Student@123` | Rohan Dipak Yadav (Roll: 24213073) |
+| **Student (Preparing)** | `priya@student.edu` | `Student@123` | Average CGPA (7.4), 6-week roadmap |
+| **Student (Placed)** | `aarav@student.edu` | `Student@123` | Top performer (8.9 CGPA), SDE-1 offer |
 | **Placement Officer** | `officer@placement.edu` | `Admin@123` | Full administrative control, funnel supervisor |
 | **Faculty Mentor** | `faculty@placement.edu` | `Admin@123` | At-risk student flagging and remedial advisory |
 
