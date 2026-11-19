@@ -1,0 +1,4 @@
+{
+  "python.defaultInterpreterPath": "${env:LOCALAPPDATA}/Python/pythoncore-3.15-64/python.exe",
+  "terminal.integrated.defaultProfile.windows": "PowerShell"
+}

@@ -1,0 +1,145 @@
+{
+  "timestamp": "2026-11-04T00:04:28.334788+00:00",
+  "total_samples": 2500,
+  "train_samples": 2000,
+  "test_samples": 500,
+  "champion_model": "LogisticRegression",
+  "models": [
+    {
+      "key": "LogisticRegression",
+      "algorithm": "Logistic Regression",
+      "version": "v1.0-logisticregression",
+      "cv_accuracy_mean": 0.9445,
+      "cv_accuracy_std": 0.005338539126015629,
+      "cv_f1_mean": 0.9665295676754055,
+      "cv_roc_auc_mean": 0.980426891458357,
+      "test_accuracy": 0.938,
+      "test_precision": 0.9568,
+      "test_recall": 0.9684,
+      "test_f1": 0.9626,
+      "test_roc_auc": 0.982,
+      "parameters": {
+        "C": 1.0,
+        "solver": "lbfgs",
+        "max_iter": 1000
+      },
+      "is_champion": true
+    },
+    {
+      "key": "DecisionTree",
+      "algorithm": "Decision Tree",
+      "version": "v1.0-decisiontree",
+      "cv_accuracy_mean": 0.9115,
+      "cv_accuracy_std": 0.008154753215150055,
+      "cv_f1_mean": 0.9467089585177613,
+      "cv_roc_auc_mean": 0.9099881078865197,
+      "test_accuracy": 0.9,
+      "test_precision": 0.9114,
+      "test_recall": 0.9733,
+      "test_f1": 0.9413,
+      "test_roc_auc": 0.8944,
+      "parameters": {
+        "max_depth": 5,
+        "min_samples_split": 10,
+        "criterion": "gini"
+      },
+      "is_champion": false
+    },
+    {
+      "key": "RandomForest",
+      "algorithm": "Random Forest",
+      "version": "v1.0-randomforest",
+      "cv_accuracy_mean": 0.9190000000000002,
+      "cv_accuracy_std": 0.009565563234854484,
+      "cv_f1_mean": 0.9518776876756968,
+      "cv_roc_auc_mean": 0.9646054431034953,
+      "test_accuracy": 0.912,
+      "test_precision": 0.9182,
+      "test_recall": 0.9806,
+      "test_f1": 0.9484,
+      "test_roc_auc": 0.9601,
+      "parameters": {
+        "n_estimators": 100,
+        "max_depth": 8,
+        "min_samples_leaf": 3
+      },
+      "is_champion": false
+    },
+    {
+      "key": "SVM",
+      "algorithm": "Support Vector Machine",
+      "version": "v1.0-svm",
+      "cv_accuracy_mean": 0.9480000000000001,
+      "cv_accuracy_std": 0.006964194138592056,
+      "cv_f1_mean": 0.9685321309701248,
+      "cv_roc_auc_mean": 0.9743471142781901,
+      "test_accuracy": 0.922,
+      "test_precision": 0.9472,
+      "test_recall": 0.9587,
+      "test_f1": 0.953,
+      "test_roc_auc": 0.975,
+      "parameters": {
+        "C": 1.5,
+        "kernel": "rbf",
+        "probability": true
+      },
+      "is_champion": false
+    },
+    {
+      "key": "GradientBoosting",
+      "algorithm": "Gradient Boosting",
+      "version": "v1.0-gradientboosting",
+      "cv_accuracy_mean": 0.9274999999999999,
+      "cv_accuracy_std": 0.005477225575051655,
+      "cv_f1_mean": 0.9564102057710098,
+      "cv_roc_auc_mean": 0.9690120581645904,
+      "test_accuracy": 0.93,
+      "test_precision": 0.9435,
+      "test_recall": 0.9733,
+      "test_f1": 0.9582,
+      "test_roc_auc": 0.97,
+      "parameters": {
+        "n_estimators": 100,
+        "learning_rate": 0.08,
+        "max_depth": 4
+      },
+      "is_champion": false
+    },
+    {
+      "key": "XGBoost",
+      "algorithm": "XGBoost",
+      "version": "v1.0-xgboost",
+      "cv_accuracy_mean": 0.9324999999999999,
+      "cv_accuracy_std": 0.012649110640673481,
+      "cv_f1_mean": 0.9594384630153024,
+      "cv_roc_auc_mean": 0.9708876962613852,
+      "test_accuracy": 0.93,
+      "test_precision": 0.9435,
+      "test_recall": 0.9733,
+      "test_f1": 0.9582,
+      "test_roc_auc": 0.9761,
+      "parameters": {
+        "n_estimators": 100,
+        "learning_rate": 0.08,
+        "max_depth": 4
+      },
+      "is_champion": false
+    }
+  ],
+  "feature_names": [
+    "cgpa",
+    "tenth_percentage",
+    "twelfth_percentage",
+    "backlogs",
+    "aptitude_score",
+    "coding_score",
+    "technical_score",
+    "communication_score",
+    "internships_count",
+    "projects_count",
+    "certifications_count",
+    "academic_consistency",
+    "skill_composite",
+    "practical_experience"
+  ]
+}
